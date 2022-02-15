@@ -1,0 +1,25 @@
+*********************************Goal Parser Interpretation******************************
+
+class Solution {
+    public String interpret(String command) {
+         StringBuilder strb=new StringBuilder();
+    for(int i=0;i<command.length();i++)
+    {
+        if(command.charAt(i)=='G')
+            strb.append('G');
+        else if(command.length()>0 && command.charAt(i)=='(' && command.charAt(i+1)==')'){
+            strb.append("o");
+            i++; //We use i++ just kam search karne ke ly kyoki 
+        }
+        else if(command.length()>0 && command.charAt(i)=='('  && command.charAt(i+1)=='a'){
+            strb.append("al");
+            i=i+3;  
+        }
+        else
+            continue;
+            
+    }
+    
+    return strb.toString();
+    }
+}
