@@ -1,0 +1,11 @@
+******************************Check If Two String Arrays are Equivalent**********************
+class Solution {
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+        String wor1 = String.join("",word1);
+        String wor2 = String.join("",word2);
+        if(wor1.compareTo(wor2)==0)
+                return true;
+        else
+            return false;
+    }
+}
