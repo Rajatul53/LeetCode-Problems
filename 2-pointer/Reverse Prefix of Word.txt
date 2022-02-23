@@ -1,0 +1,13 @@
+******************************Reverse Prefix of Word********************************
+class Solution {
+   public String reversePrefix(String word, char ch) {
+	StringBuilder output= new StringBuilder();
+
+	int index = word.indexOf(ch);
+	for(int i = index;i>=0;i--)
+		output.append(word.charAt(i));
+
+	output.append(word.substring(index+1, word.length()));
+	return output.toString();
+   }
+}
